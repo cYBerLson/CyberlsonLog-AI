@@ -102,18 +102,18 @@ sudo apt install -y python3.11 python3.11-venv python3-pip nginx certbot python3
 # Create a dedicated system user (principle of least privilege)
 # Never run the application as root
 sudo useradd --system --home /opt/cyberlsonlog ai --shell /bin/bash cyberlsonlog ai
-sudo mkdir -p /opt/cyberlsonlog ai
-sudo chown cyberlsonlog ai:cyberlsonlog ai /opt/cyberlsonlog ai
+sudo mkdir -p /opt/cyberlsonlog-ai
+sudo chown cyberlsonlog-ai:cyberlsonlog-ai /opt/cyberlsonlog-ai
 ```
 
 ### 4.2 Application Deployment
 
 ```bash
 # Switch to the application user
-sudo -u cyberlsonlog ai -i
+sudo -u cyberlsonlog-ai -i
 
 # Clone repository
-cd /opt/cyberlsonlog ai
+cd /opt/cyberlsonlog-ai
 git clone https://github.com/cYBerLson/CyberlsonLog-Ai.git
 
 # Create virtual environment
@@ -235,7 +235,7 @@ server {
     # ── Static Files ────────────────────────────────────────────────────────
     # Serve static assets directly via Nginx (faster than Gunicorn)
     location /static {
-        alias /opt/cyberlsonlog ai/static;
+        alias /opt/cyberlsonlog-ai/static;
         expires 1d;
         add_header Cache-Control "public";
     }
@@ -256,7 +256,7 @@ server {
 Enable the site:
 
 ```bash
-sudo ln -s /etc/nginx/sites-available/cyberlsonlog ai /etc/nginx/sites-enabled/
+sudo ln -s /etc/nginx/sites-available/cyberlsonlog-ai /etc/nginx/sites-enabled/
 sudo nginx -t                    # Test configuration
 sudo systemctl reload nginx
 ```
