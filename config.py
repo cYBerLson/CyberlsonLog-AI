@@ -1,9 +1,11 @@
 """
-config.py – CyberlsonShield Configuration
-======================================
+config.py – CyberlsonLog AI Configuration
+=========================================
+Central configuration for CyberlsonLog AI.
+
 Loads all sensitive settings from environment variables.
-Never hardcodes secrets; follows OWASP A02:2021 (Cryptographic Failures)
-and A05:2021 (Security Misconfiguration) mitigations.
+Never hardcodes secrets and follows security best practices,
+including OWASP Top 10 recommendations for secure configuration.
 """
 
 import os
@@ -18,7 +20,14 @@ class Config:
     # SECRET_KEY must be set via environment variable in production.
     # Flask uses this to sign session cookies. A missing/weak key is a critical
     # security flaw (OWASP A07: Identification and Authentication Failures).
-    SECRET_KEY = os.environ.get("SECRET_KEY", "dev-change-this-in-production")
+    SECRET_KEY = os.environ.get("SECRET_KEY")
+
+if not SECRET_KEY:
+    raise RuntimeError(
+        "SECRET_KEY environment variable is required. "
+        "Copy .env.example to .env for local development."
+    )
+ 
 
     # ── File Upload Security ───────────────────────────────────────────────────
     # Restrict accepted extensions to prevent upload of executable or dangerous
