@@ -1,7 +1,7 @@
 """
 app/routes.py – Flask Route Handlers
 ======================================
-Implements all HTTP endpoints for CyberlsonShield.
+Implements all HTTP endpoints for CyberlsonLog AI.
 
 Security controls applied at every route:
   - File extension whitelist (ALLOWED_EXTENSIONS)
@@ -233,7 +233,7 @@ def generate_report():
 @main_bp.route("/health")
 def health():
     """Health check endpoint for load balancers and monitoring."""
-    return jsonify({"status": "ok", "service": "CyberlsonShield"}), 200
+    return jsonify({"status": "ok", "service": "CyberlsonLog AI"}), 200
 
 
 @main_bp.errorhandler(413)
