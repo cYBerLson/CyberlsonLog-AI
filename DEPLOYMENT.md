@@ -321,7 +321,7 @@ NoNewPrivileges=true
 # Logging
 StandardOutput=journal
 StandardError=journal
-SyslogIdentifier=cyberlsonshield
+SyslogIdentifier=cyberlsonlog ai
 
 [Install]
 WantedBy=multi-user.target
