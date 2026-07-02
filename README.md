@@ -18,7 +18,7 @@
 ---
 
 > ** Defensive Purpose Statement**
-> CyberlsonShield is a strictly defensive security tool. It contains no exploit code, attack automation, malware logic, or penetration testing capabilities. Its sole purpose is log anomaly detection and security monitoring.
+> CyberlsonLog AI is a strictly defensive security tool. It contains no exploit code, attack automation, malware logic, or penetration testing capabilities. Its sole purpose is log anomaly detection and security monitoring.
 
 ---
 
@@ -26,7 +26,7 @@
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│  🛡 CyberlsonLog AI                  ● SYSTEM ONLINE // DEFENSIVE MODE │
+│  🛡 CyberlsonLog AI                   ● SYSTEM ONLINE // DEFENSIVE MODE │
 ├─────────────────────────────────────────────────────────────────┤
 │                                                                   │
 │           Intelligent Log Anomaly Detection                       │
@@ -144,6 +144,7 @@ CyberlsonLog AI/
 ├── run.py                   # Application entry point
 ├── gunicorn.conf.py         # Production WSGI server configuration
 ├── requirements.txt
+├── .env.example
 ├── .gitignore
 ├── README.md
 └── DEPLOYMENT.md
@@ -402,7 +403,7 @@ The idea: bridge the gap between raw system logs and actionable threat intellige
 
 This project demonstrates skills directly applicable to SOC Analyst, Security Data Analyst, Blue Team Engineer, and AI Security Engineer roles.
 
-Check it out on GitHub: [https://github.com/cYBerLson/CyberlsonLog-AI]
+Check it out on GitHub: [link]
 
 #Cybersecurity #MachineLearning #PythonDeveloper #BlueTeam #SOC #AnomalyDetection #SecurityEngineering #OpenSource
 
