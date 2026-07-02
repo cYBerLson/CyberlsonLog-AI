@@ -114,7 +114,7 @@ sudo -u cyberlsonlog ai -i
 
 # Clone repository
 cd /opt/cyberlsonlog ai
-git clone https://github.com/cYBerLson/CyberlsonLogAi.git .
+git clone https://github.com/cYBerLson/CyberlsonLog-Ai.git
 
 # Create virtual environment
 python3.11 -m venv venv
@@ -137,11 +137,11 @@ nano .env
 
 ```bash
 # Restrict uploads directory: only the app user can read/write
-chmod 700 /opt/cyberlsonlog ai/uploads
-chmod 700 /opt/cyberlsonlog ai/reports
+chmod 700 /opt/cyberlsonlog-ai/uploads
+chmod 700 /opt/cyberlsonlog-ai/reports
 
 # Static files: readable by Nginx
-chmod -R 755 /opt/cyberlsonlog ai/static
+chmod -R 755 /opt/cyberlsonlog-ai/static
 ```
 
 ---
@@ -151,7 +151,7 @@ chmod -R 755 /opt/cyberlsonlog ai/static
 ### Test Gunicorn manually first:
 
 ```bash
-cd /opt/cyberlsonlog ai
+cd /opt/cyberlsonlog-ai
 source venv/bin/activate
 
 gunicorn --config gunicorn.conf.py run:application
@@ -166,15 +166,15 @@ gunicorn --config gunicorn.conf.py run:application
 Create the Nginx site configuration:
 
 ```bash
-sudo nano /etc/nginx/sites-available/cyberlsonlog ai
+sudo nano /etc/nginx/sites-available/cyberlsonlogai
 ```
 
 Pasting the following:
 
 ```nginx
-# /etc/nginx/sites-available/cyberlsonlog ai
+# /etc/nginx/sites-available/cyberlsonlogai
 # ========================================
-# Nginx reverse proxy for CyberlsonLog AI
+# Nginx reverse proxy for CyberlsonLog-AI
 # Security hardening per OWASP guidelines
 
 server {
@@ -287,7 +287,7 @@ sudo certbot renew --dry-run
 Create a systemd unit for automatic startup and process supervision:
 
 ```bash
-sudo nano /etc/systemd/system/cyberlsonshield.service
+sudo nano /etc/systemd/system/cyberlsonlog-ai.service
 ```
 
 ```ini
@@ -298,15 +298,15 @@ Wants=network.target
 
 [Service]
 # Run as dedicated non-root user
-User=cyberlsonshield
-Group=cyberlsonshield
-WorkingDirectory=/opt/cyberlsonlog ai
+User=cyberlsonlog
+Group=cyberlsonlog
+WorkingDirectory=/opt/cyberlsonlog-ai
 
 # Load environment variables from .env file
 EnvironmentFile=/opt/cyberlsonlog ai/.env
 
 # Gunicorn start command
-ExecStart=/opt/cyberlsonlog ai/venv/bin/gunicorn --config gunicorn.conf.py run:application
+ExecStart=/opt/cyberlsonlog-ai/venv/bin/gunicorn --config gunicorn.conf.py run:application
 
 # Restart on failure
 Restart=always
@@ -315,7 +315,7 @@ RestartSec=5
 # Security hardening
 PrivateTmp=true
 ProtectSystem=strict
-ReadWritePaths=/opt/cyberlsonlog ai/uploads /opt/cyberlsonlog ai/reports
+ReadWritePaths=/opt/cyberlsonlog-ai/uploads /opt/cyberlsonlog-ai/reports
 NoNewPrivileges=true
 
 # Logging
@@ -331,12 +331,12 @@ Enable and start the service:
 
 ```bash
 sudo systemctl daemon-reload
-sudo systemctl enable cyberlsonlson ai
-sudo systemctl start cyberlsonlog ai
-sudo systemctl status cyberlsonlog ai
+sudo systemctl enable cyberlsonlson-ai
+sudo systemctl start cyberlsonlog-ai
+sudo systemctl status cyberlsonlog-ai
 
 # View logs
-sudo journalctl -u cyberlsonlog ai -f
+sudo journalctl -u cyberlsonlog-ai -f
 ```
 
 ---
@@ -350,7 +350,7 @@ Create `render.yaml` in the project root:
 ```yaml
 services:
   - type: web
-    name: cyberlsonlog ai
+    name: cyberlsonlog-ai
     env: python
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn --config gunicorn.conf.py run:application
