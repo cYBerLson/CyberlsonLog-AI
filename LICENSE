@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2024 SentinelAI
+Copyright (c) 2026 CYBERLSON TEAM TECH
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -20,14 +20,15 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
----
+------------------------------------------------------------------------------
 
 DEFENSIVE USE NOTICE
 
-SentinelAI is designed and intended exclusively for defensive security purposes:
-log monitoring, anomaly detection, and threat analysis. It contains no
-offensive security capabilities, exploit code, malware logic, attack automation,
-or penetration testing tools.
+CyberlsonLog AI is designed and intended exclusively for defensive cybersecurity
+purposes, including log monitoring, anomaly detection, threat analysis, and
+security operations. It contains no offensive security capabilities, exploit
+code, malware logic, attack automation, or penetration testing tools.
 
-Users are responsible for complying with all applicable laws and organizational
-policies when deploying and operating this software.
+Users are responsible for complying with all applicable laws, regulations,
+organizational policies, and security requirements when deploying or operating
+this software.
