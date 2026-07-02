@@ -35,5 +35,5 @@ loglevel  = "info"
 access_log_format = '%(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" %(D)sµs'
 
 # ── Process ────────────────────────────────────────────────────────────────────
-proc_name = "cyberlsonshield"
+proc_name = "cyberlsonlog-ai"
 preload_app = True    # Load app before forking; catches import errors early
