@@ -331,9 +331,9 @@ Enable and start the service:
 
 ```bash
 sudo systemctl daemon-reload
-sudo systemctl enable cyberlsonlson-ai
-sudo systemctl start cyberlsonlog-ai
-sudo systemctl status cyberlsonlog-ai
+sudo systemctl enable cyberlsonlson ai
+sudo systemctl start cyberlsonlog ai
+sudo systemctl status cyberlsonlog ai
 
 # View logs
 sudo journalctl -u cyberlsonlog-ai -f

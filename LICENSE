@@ -24,10 +24,10 @@ SOFTWARE.
 
 DEFENSIVE USE NOTICE
 
-CyberlsonLog AI is designed and intended exclusively for defensive cybersecurity
-purposes, including log monitoring, anomaly detection, threat analysis, and
-security operations. It contains no offensive security capabilities, exploit
-code, malware logic, attack automation, or penetration testing tools.
+SentinelAI is designed and intended exclusively for defensive security purposes:
+log monitoring, anomaly detection, and threat analysis. It contains no
+offensive security capabilities, exploit code, malware logic, attack automation,
+or penetration testing tools.
 
 Users are responsible for complying with all applicable laws, regulations,
 organizational policies, and security requirements when deploying or operating
