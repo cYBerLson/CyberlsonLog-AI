@@ -21,8 +21,8 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/CyberlsonLog AI.git
-cd CyberlsonLog AI
+git clone https://github.com/cYBerLson/CyberlsonLog-AI.git
+cd CyberlsonLog-AI
 
 # Create and activate virtual environment
 python3 -m venv venv
