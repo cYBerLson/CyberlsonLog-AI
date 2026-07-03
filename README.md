@@ -407,36 +407,17 @@ See [DEPLOYMENT.md](DEPLOYMENT.md) for full instructions covering:
 
 ---
 
-## LinkedIn Announcement Post
+## ⭐ Support the Project
 
----
+If you find CyberlsonLog AI useful, you can support the project by:
 
-🛡 **Excited to share CyberlsonLog AI** — an AI-powered log anomaly detection system I built end-to-end.
+- ⭐ Starring the repository
+- 🍴 Forking it
+- 🐛 Reporting bugs or security issues
+- 💡 Suggesting new features
+- 🤝 Contributing through pull requests
 
-The idea: bridge the gap between raw system logs and actionable threat intelligence, using machine learning — not just rule-based matching.
-
-**What it does:**
- Ingests Apache, Nginx, syslog, and auth.log files
- Extracts 12 behavioral features per time window (failed auth rates, request bursts, off-hours activity, suspicious patterns)
- Trains an **Isolation Forest** model on each upload for unsupervised anomaly detection
- Scores each IP and time window on a 0–100 risk scale with plain-English explanations
- Generates a downloadable PDF threat analysis report with defensive recommendations
-
-**Tech stack:** Python 3.11 · Flask · Scikit-learn · Pandas · Plotly · ReportLab · Gunicorn · Nginx
-
-**Security-first design:**
-- All inputs sanitized with `bleach`
-- Files deleted immediately after analysis
-- OWASP Top 10 mitigations documented in code
-- Security headers on every response
-- Deployed behind Nginx with TLS and rate limiting
-
-This project demonstrates skills directly applicable to SOC Analyst, Security Data Analyst, Blue Team Engineer, and AI Security Engineer roles.
-
-Check it out on GitHub: [link]
-
-#Cybersecurity #MachineLearning #PythonDeveloper #BlueTeam #SOC #AnomalyDetection #SecurityEngineering #OpenSource
-
+Every contribution helps improve CyberlsonLog AI and makes defensive security tools more accessible to the community.
 ---
 
 ## License
