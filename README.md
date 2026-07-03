@@ -162,6 +162,36 @@ Browser → Nginx (TLS termination, rate limiting, static files)
        → risk_engine (composite scoring, findings, PDF)
        → JSON response → Dashboard renders charts
 ```
+##  Screenshots
+
+###  Home Dashboard
+![Home Dashboard](static/img/screenshots/dashboard-home.png)
+
+###  Upload Sample Log
+![Upload Log](static/img/screenshots/sample-log-nginx.png)
+
+###  Suspicious IP Analysis
+![Suspicious IP Analysis](static/img/screenshots/suspicious-ip-analysis.png)
+
+###  Defensive Recommendations
+![Defensive Recommendations](static/img/screenshots/defensive-recommendations.png)
+
+###  Chat Graphs
+![Chat Graphs](static/img/screenshots/chat-graphs.png)
+
+###  Generated Reports
+
+**Report 1**
+
+![Report 1](static/img/screenshots/report-1.png)
+
+**Report 2**
+
+![Report 2](static/img/screenshots/report-2.png)
+
+**Report 3**
+
+![Report 3](static/img/screenshots/report-3.png)
 
 ---
 
