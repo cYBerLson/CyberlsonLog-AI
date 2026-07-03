@@ -407,15 +407,15 @@ See [DEPLOYMENT.md](DEPLOYMENT.md) for full instructions covering:
 
 ---
 
-## ⭐ Support the Project
+##  Support the Project
 
 If you find CyberlsonLog AI useful, you can support the project by:
 
-- ⭐ Starring the repository
-- 🍴 Forking it
-- 🐛 Reporting bugs or security issues
-- 💡 Suggesting new features
-- 🤝 Contributing through pull requests
+-  Starring the repository
+-  Forking it
+-  Reporting bugs or security issues
+-  Suggesting new features
+-  Contributing through pull requests
 
 Every contribution helps improve CyberlsonLog AI and makes defensive security tools more accessible to the community.
 ---
